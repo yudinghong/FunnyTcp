@@ -1,0 +1,24 @@
+//
+// Created by Administrator on 2022/6/4.
+//
+
+#ifndef SOCKETBIND_TCPBINDENUM_H
+#define SOCKETBIND_TCPBINDENUM_H
+
+namespace TcpBind {
+    enum TCPBIND_TYPE {
+        TCPBIND_CLIENT,
+        TCPBIND_HOST
+    };
+
+    enum TCPBIND_ERROR {
+        TCPBIND_NO_ERROR,
+        TCPBIND_INIT_WSA_STARTUP_FAILED,
+        TCPBIND_INIT_FAILED,
+        TCPBIND_INIT_WITHOUT_IP,
+        TCPBIND_INIT_WITHOUT_PORT,
+        TCPBIND_CONNECT_TO_HOST_FAILED
+    };
+}
+
+#endif //SOCKETBIND_TCPBINDENUM_H
