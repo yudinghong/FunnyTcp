@@ -3,4 +3,4 @@ project(socketbind)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(socketbind main.cpp lib/TcpHandler.cpp lib/TcpHandler.h lib/TcpBindEnum.h lib/TcpMessageHandler.cpp lib/TcpMessageHandler.h)
+add_executable(socketbind main.cpp lib/TcpLibEnum.h lib/TcpMessageHandler.cpp lib/TcpMessageHandler.h lib/TcpClient.cpp lib/TcpClient.h lib/TcpServer.cpp lib/TcpServer.h lib/SocketBase.cpp lib/SocketBase.h)

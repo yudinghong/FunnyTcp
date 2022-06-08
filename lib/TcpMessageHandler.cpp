@@ -13,7 +13,7 @@ using std::thread;
 using std::chrono::seconds;
 using std::chrono::microseconds;
 
-TcpBind::TcpMessageHandler::TcpMessageHandler(SOCKET socketObject, int bufLength, bool isAsync) :
+TcpLib::TcpMessageHandler::TcpMessageHandler(SOCKET socketObject, int bufLength, bool isAsync) :
     socketObject(std::move(socketObject)),
     bufLength(bufLength),
     async(async),
@@ -22,7 +22,7 @@ TcpBind::TcpMessageHandler::TcpMessageHandler(SOCKET socketObject, int bufLength
 
 }
 
-void TcpBind::TcpMessageHandler::debugMessage() {
+void TcpLib::TcpMessageHandler::debugMessage() {
     char *buf = new char[this->bufLength];
     while (true) {
         if (!connected) {
@@ -38,6 +38,6 @@ void TcpBind::TcpMessageHandler::debugMessage() {
     delete[] buf;
 }
 
-void TcpBind::TcpMessageHandler::setConnected(bool connected) {
+void TcpLib::TcpMessageHandler::setConnected(bool connected) {
     this->connected = connected;
 }

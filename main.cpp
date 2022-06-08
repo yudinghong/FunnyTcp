@@ -1,12 +1,13 @@
 #include <iostream>
 
-#include "./lib/TcpHandler.h"
+#include "lib/TcpClient.h"
 
-using TcpBind::TcpHandler;
+using namespace TcpLib;
 
 int main() {
-    TcpHandler *tcpClient = new TcpHandler("127.0.0.1", 11111);
+    TcpClient *tcpClient = new TcpClient("127.0.0.1", 11111);
     tcpClient->start();
+    tcpClient->isConnected();
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }

@@ -11,7 +11,7 @@
 #include <atomic>
 using std::atomic;
 
-namespace TcpBind {
+namespace TcpLib {
     class TcpMessageHandler {
     public:
         TcpMessageHandler(SOCKET socketObject, int bufLength = 255, bool isAsync=false);

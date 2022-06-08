@@ -1,0 +1,24 @@
+//
+// Created by Administrator on 2022/6/4.
+//
+
+#ifndef SOCKETBIND_TCPLIBENUM_H
+#define SOCKETBIND_TCPLIBENUM_H
+
+namespace TcpLib {
+    enum TCPLIB_TYPE {
+        TCPLIB_CLIENT,
+        TCPLIB_HOST
+    };
+
+    enum TCPLIB_ERROR {
+        TCPLIB_NO_ERROR,
+        TCPLIB_INIT_WSA_STARTUP_FAILED,
+        TCPLIB_INIT_FAILED,
+        TCPLIB_INIT_WITHOUT_IP,
+        TCPLIB_INIT_WITHOUT_PORT,
+        TCPLIB_CONNECT_TO_HOST_FAILED
+    };
+}
+
+#endif //SOCKETBIND_TCPLIBENUM_H
